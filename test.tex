@@ -1,0 +1,159 @@
+%% This is a template of whu bacholer thesis
+%% Copyright (c) 2015. Wu Changlong<changlong1993@gmail>
+%
+%  This work may be distributed and/or modified under the
+%  conditions of the LaTeX Project Public License, either version 1.3
+%  of this license or (at your option) any later version.
+%  The latest version of this license is in
+%
+%   http://www.latex-project.org/lppl.txt
+%
+%  and version 1.3 or later is part of all distributions of LaTeX
+%  version 2005/12/01 or later.
+
+\documentclass{whuthesis}
+\usepackage[indentafter]{titlesec}
+\usepackage{titletoc}
+\usepackage{cite}
+\usepackage{amsmath}               % great math stuff
+\usepackage{amsfonts}              % for blackboard bold, etc
+\usepackage{amsthm} 
+\usepackage[x11names,svgnames,dvipsnames]{xcolor}
+\usepackage{listings}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%% 依次填上：论文题目、学院、专业、姓名、导师、学号、密级 的中文 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\maketitlea{代数数域上的椭圆曲线之和睦对与等分循环分布研究}{计算机学院}{计算机科学与技术}{XXX}{XXX}{2011301500xxx}{绝密}
+
+%%%%%%%%%%%%%%%% 依次填上：论文题目、学院、专业、姓名、导师、学号、密级 的英文 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\maketitleb{On the Distribution of Amicable Pair and Aliquot Cycles of Elliptic Curve over Global Fields}{Computer School}{Computer Science and Technology}{XXX}{XXX}
+
+%%%%%%%%%%%%%%%% 中文摘要 以及 关键字 %%%%%%%%%%%%%%%%%%%%%
+
+\cnabstract{
+本文研究有理数域和代数数域上椭圆曲线的和睦对(Amicable Pair)以及等分循环(Aliquot Cycle)的分布问题。此问题最初由Silverman等人在文献\cite{JHS}中提出，文献\cite{JHS}证明了对任意长度的等分换存在，并猜想其分布满足$\displaystyle O\left(\frac{x}{(\log(x))^2}\right)$。文献$[2]$证明了上述猜想在”平均“意义下是正确的，文献$[3]$将有理数域$
+\mathbb{Q}$上的定义推广到了任意代数数域$K/\mathbb{Q}$上。本文的主要工作是将文献\cite{JHS}中的一系列猜想推广到了任意代数数域上，并给出了部分猜想的证明。
+本文的研究揭示了整体域(Global Field)上椭圆曲线的有理点个数由它们的局部性质完全决定，并与BSD猜想有本质的联系。\par
+}{
+椭圆曲线；\quad 和睦对；\quad 等分循环 % here is the key word
+}
+
+%%%%%%%%%%%%%%%% 英文摘要 以及 关键字 %%%%%%%%%%%%%%%%%%%%%
+
+\enabstract{
+In this paper, we study the distribution of the amicable pairs and aliquot cycles of elliptic curve over global fields. This concept was first introduced by Joe Silverman et al. in \cite{JHS}, where they proved existence of arbitrary long aliquot cycles and conjectured that the distribution of aliquot cycle should satisfy $O\left(\frac{x}{(\log(x))^2}\right)$. James at al. proved in $[2]$ that the upper bound holds under the "average" sense, the notion of amicable pair and aliquot cycle later been extended to arbitrary number fields in $[3]$. The main work in this paper is to extend the series of conjecture in \cite{JHS} to arbitrary number fields, and proved some of the conjecture. Our results show that the number of rational points of elliptic cures are totally determined by their local properties, and which has a essential relationship to BSD conjecture. 
+}{
+Elliptic Curve;\quad Amicable Pair;\quad Aliquot Cycle % here is the key word, each word separated by ; + \quad
+}
+
+%%%%%%%%%%%%%%% Start a new Chapter %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{预备知识}
+本章我们将讨论椭圆曲线的算术性质，并给出和睦对与等分循环的定义。为方便对本文的阅读，我们将本文所需要的抽象代数和代数几何结论在本章不做证明的给出。\par
+
+%%%%%%%%%%%%%%% Start a new section %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{抽象代数}
+本章我们将讨论椭圆曲线的算术性质，并给出和睦对与等分循环的定义。为方便对本文的阅读，我们将本文所需要的抽象代数和代数几何结论在本章不做证明的给出。
+
+%%%%%%%%%%%%%%% Start a new subsection %%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{有限域}
+
+\begin{theorem}[不可约多项式计数]
+设$F_q$为有限域，记$a_n$为阶为$n$的所有不可约多项式的个数。那么我们有：
+$$a_n=\frac{q^n}{n}+O\left(\frac{q^{n/2}}{n}\right)$$
+\end{theorem}
+
+\begin{definition}[Zeta函数]
+对有限域上的多项式环$R=F_q[x]$，我们定义其Zeta函数为：
+$$\zeta_R(s)=\sum_{f\in R\text{ and monic}}\frac{1}{|f|^2}, \text{ 这里}|f|\text{表示}f\text{的阶}$$
+\end{definition}
+
+\begin{proof}[定理1.1证明]
+我们用$\zeta_R(s)$来估计$a_n$...
+\end{proof}
+
+\subsection{整体域}
+\section{算术椭圆曲线}
+\subsection{基本算术性质}
+\subsection{有理点计数}
+\section{概念及符号}
+
+\chapter{理论分析}
+\section{主定理证明}
+
+\chapter{数值及算法分析}
+
+\section{算法}
+\subsection{算法描述}
+我们用伪代码描述如下：
+\begin{algorithm}
+\begin{algorithmic}
+\IF{$i\leq0$}
+\STATE $i\gets1$
+\ELSE\IF{$i\geq0$}
+\STATE $i\gets0$
+\ENDIF\ENDIF
+\end{algorithmic}
+\end{algorithm}
+
+\section{代码}
+\subsection{代码描述}
+我们用代码描述如下：
+\begin{lstlisting}[language={[ANSI]C}]
+#include<stdio.h>
+
+int main()
+{
+    if(true){
+        printf("Hello world!\n");// say hello
+    }
+    return 0;
+}
+\end{lstlisting}
+
+%%%%%%%%%%% Use the macro \conclusion to start you conclution chapter %%%%%%%%%%%%%%%%%%%
+
+\conclusion
+在这里写下结论
+
+
+
+
+\renewcommand{\bibname}{\zihao{2-}\hei 参考文献} % change the english bibliography title to chinese
+\clearpage
+\addcontentsline{toc}{chapter}{\hei 参考文献} % add this chapter to content list
+
+%%%%%%%%%%% write your reference here, for more detail seek google for help:) %%%%%%%%%%%%%%%%%%
+
+\begin{thebibliography}{99}
+\bibitem{JHS}
+\newblock Joseph H. Silverman.
+\newblock \textbf{The Arithmetic Of Elliptic Curves}.
+\newblock {\em Springer GTM 106}, 2009.
+\end{thebibliography}
+
+%%%%%%%%%%%%%% Use macro \thanks to start you thanks words
+
+\thanks
+在此我要感谢我的导师。。。blabla。。。
+
+
+%%%%%%%%%%%% Use macro \appendix to start you appendix %%%%%%%%%%%%%%%%%%%%%%
+
+\appendix
+
+\apsection{附录一} % use the \apsection to start a new section, do not use \section, which will case some issues for content numbering
+在本附录中我们将给出定理2.2.3的证明
+
+\apsubsection{子目录} % use \apsubsection to start a new subsection, this is designed only for appendix
+
+
+\end{document} 
